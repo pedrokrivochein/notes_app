@@ -18,6 +18,14 @@ function OpenTab(el, id){
     main.children[id].style.display = "block";
 }
 
+var input = document.getElementById("listText");
+input.addEventListener("keyup", (event) => {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        AddToList();
+    }
+})
+
 function AddToList(){
     var listText = document.getElementById("listText");
     var listBody = document.getElementById("listBody");
